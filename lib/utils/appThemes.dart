@@ -12,10 +12,5 @@ class AppThemes{
       selectedItemColor: AppColors.whiteColor,
       selectedLabelStyle: AppStyles.bold12white,
     ),
-    primaryColor: AppColors.goldColor,
-    appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.blackBg,
-      centerTitle: true,
-    ),
   );
 }
