@@ -1,0 +1,9 @@
+flutter_native_splash:
+  color: "#202020"
+  image: assets/images/islamiLogo.png
+  branding: assets/images/islamiBranding.png
+
+  android_12:
+   image: assets/images/islamiLogo.png
+   color: "#202020"
+   branding: assets/images/islamiBranding.png
