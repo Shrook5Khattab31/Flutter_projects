@@ -39,12 +39,6 @@ class AppStyles{
       fontSize: 14,
       fontFamily: "assets/fonts/Janna LT Bold.ttf"
   );
-  static const TextStyle bold20black= TextStyle(
-      color: AppColors.blackBg,
-      fontWeight: FontWeight.bold,
-      fontSize: 20,
-      fontFamily: "assets/fonts/Janna LT Bold.ttf"
-  );
   static const TextStyle bold24black= TextStyle(
       color: AppColors.blackBg,
       fontWeight: FontWeight.bold,
