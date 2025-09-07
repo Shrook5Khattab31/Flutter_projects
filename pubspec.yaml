@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/files/Suras/
     - assets/images/homeAssets/
     - assets/images/introAssets/
     - assets/images/sebhaAssets/
