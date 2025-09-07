@@ -61,7 +61,4 @@ class QuranTab extends StatelessWidget {
       ),
     );
   }
-  Future<void> loadFile(int index) async {
-    String fileContent= await rootBundle.loadString('assets/files/${index+1}');
-  }
 }
