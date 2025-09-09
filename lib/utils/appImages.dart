@@ -19,6 +19,12 @@ class AppImages{
   static const String sebhaCounter = 'assets/images/sebhaAssets/SebhaBody.png';
   static const String sebhaCounterTail = 'assets/images/sebhaAssets/Sebha.png';
 
+  ///radioTab///
+  static const String notPlayedDecoration =
+      'assets/images/radioAssets/mosqueBg.png';
+  static const String playedDecoration =
+      'assets/images/radioAssets/playingAudio1.png';
+
   ///icons///
   static const String quranIcon = 'assets/icons/quran_icon.png';
   static const String hadethIcon = 'assets/icons/hadeth_icon.png';
