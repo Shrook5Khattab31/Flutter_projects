@@ -14,6 +14,13 @@ class AppThemes{
     ),
     primaryColor: AppColors.goldColor,
     appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(
+        color: AppColors.goldColor,
+      ),
+      actionsIconTheme: IconThemeData(
+        color: AppColors.goldColor,
+      ),
+      titleTextStyle: AppStyles.bold20gold,
       backgroundColor: AppColors.blackBg,
       centerTitle: true,
     ),
