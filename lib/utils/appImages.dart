@@ -16,7 +16,9 @@ class AppImages{
   ///suraDetails///
   static const String suraDecoration = 'assets/images/suraDetailsDecoration.png';
   ///sebhaTab///
-  static const String sebhaCounter = 'assets/images/sebhaAssets/Sebha.png';
+  static const String sebhaCounter = 'assets/images/sebhaAssets/SebhaBody.png';
+  static const String sebhaCounterTail = 'assets/images/sebhaAssets/Sebha.png';
+
   ///icons///
   static const String quranIcon = 'assets/icons/quran_icon.png';
   static const String hadethIcon = 'assets/icons/hadeth_icon.png';
