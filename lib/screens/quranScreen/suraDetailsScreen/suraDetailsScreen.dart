@@ -15,6 +15,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   int? selectedIndex;
   List<String> suraLines= [];
   bool isLoaded=false;
+  bool isPressed = false;
   @override
   Widget build(BuildContext context) {
     var height= MediaQuery.of(context).size.height;
@@ -26,14 +27,27 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
     }
     return Scaffold(
       appBar: AppBar(
+        actionsPadding: EdgeInsets.symmetric(horizontal: 20),
         toolbarHeight: height*0.08,
         leading: InkWell(
-          child: Icon(Icons.arrow_back,color: AppColors.goldColor,),
-          onTap: (){Navigator.pop(context);},
-        ),
+          child: Icon(Icons.arrow_back,), onTap: () {
+          Navigator.pop(context);
+        },),
         title: Text(SurasInfo.englishQuranSurahs[index],style: AppStyles.bold20gold,),
         actions: [
-          TextButton(onPressed: (){}, child: Icon(Icons.table_rows_rounded,color: AppColors.goldColor,)),
+          GestureDetector(
+              onTap: () {
+                if (!isPressed) {
+                  isPressed = true;
+                } else {
+                  isPressed = false;
+                }
+                setState(() {});
+              },
+              child: Icon(
+                isPressed ? Icons.table_rows_rounded : Icons
+                    .format_line_spacing, size: 28,)
+          ),
         ],
       ),
       backgroundColor: AppColors.blackBg,
@@ -44,7 +58,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
           image: DecorationImage(image: AssetImage(AppImages.suraDecoration)),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: width*0.04),
+          padding: EdgeInsets.symmetric(horizontal: width * 0.06),
           child: Column(
             children: [
               Padding(
@@ -59,34 +73,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                   ),
                 ),
               ):
-              Expanded(
-                child: ListView.separated(
-                  itemBuilder: (context, index){
-                    return GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          selectedIndex=index;
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 8,horizontal: 6),
-                        decoration: BoxDecoration(
-                          color: selectedIndex==index?AppColors.goldColor:Colors.transparent,
-                          border: BoxBorder.all(color: AppColors.goldColor),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Text('[${index+1}] ${suraLines[index]}',
-                          style: selectedIndex==index?AppStyles.bold20black:AppStyles.bold20gold,
-                          textDirection: TextDirection.rtl,
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    );
-                  },
-                  separatorBuilder: (context, index) => SizedBox(height: 8,),
-                  itemCount: suraLines.length,
-                ),
-              ),
+              isPressed ? changeToRows() : changeToContainers(),
               SizedBox(height: height*0.13,),
             ],
           ),
@@ -99,5 +86,58 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
     List<String> verses=fileContent.split('\n');
     suraLines = verses;
     setState(() {});
+  }
+
+  Widget changeToRows() {
+    return Expanded(
+      child: SingleChildScrollView(
+        child: Text.rich(
+          TextSpan(
+            children: List.generate(suraLines.length, (index) {
+              return TextSpan(
+                text: '[${index + 1}] ${suraLines[index]}',
+                style: AppStyles.bold20gold,
+              );
+            }),
+          ),
+          textDirection: TextDirection.rtl,
+          textAlign: TextAlign.justify,
+        ),
+      ),
+    );
+  }
+
+  Widget changeToContainers() {
+    return Expanded(
+      child: ListView.separated(
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = index;
+              });
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+              decoration: BoxDecoration(
+                color: selectedIndex == index ? AppColors.goldColor : Colors
+                    .transparent,
+                border: BoxBorder.all(color: AppColors.goldColor),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Text('[${index + 1}] ${suraLines[index]}',
+                style: selectedIndex == index
+                    ? AppStyles.bold20black
+                    : AppStyles.bold20gold,
+                textDirection: TextDirection.rtl,
+                textAlign: TextAlign.center,
+              ),
+            ),
+          );
+        },
+        separatorBuilder: (context, index) => SizedBox(height: 8,),
+        itemCount: suraLines.length,
+      ),
+    );
   }
 }
