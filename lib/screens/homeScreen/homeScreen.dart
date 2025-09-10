@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_project/screens/homeScreen/widgets/selectedItemWidget.dart';
 import 'package:islami_project/screens/quranScreen/quranTab.dart';
 import 'package:islami_project/screens/sebhaScreen/sebhaTab.dart';
+import 'package:islami_project/screens/timeScreen/timeTab.dart';
 import 'package:islami_project/utils/appImages.dart';
 
 import '../radioScreen/radioTab.dart';
@@ -68,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 3:
         return RadioTab();
       case 4:
-        return Placeholder();
+        return TimeTab();
       default: return QuranTab();
     }
   }
