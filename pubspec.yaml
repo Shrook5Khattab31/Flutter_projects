@@ -66,12 +66,9 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/files/Suras/
-    - assets/files/azkar/
     - assets/images/homeAssets/
     - assets/images/introAssets/
     - assets/images/sebhaAssets/
-    - assets/images/radioAssets/
-    - assets/images/timeAssets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

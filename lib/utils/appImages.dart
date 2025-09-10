@@ -13,8 +13,6 @@ class AppImages{
   static const String radioBgImage = 'assets/images/homeAssets/RadioBackground.png';
   static const String SebhaBgImage = 'assets/images/homeAssets/SebhaBackground.png';
   static const String timeBgImage = 'assets/images/homeAssets/TimeBackground.png';
-  ///suraDetails///
-  static const String suraDecoration = 'assets/images/suraDetailsDecoration.png';
   ///sebhaTab///
   static const String sebhaCounter = 'assets/images/sebhaAssets/SebhaBody.png';
   static const String sebhaCounterTail = 'assets/images/sebhaAssets/Sebha.png';
