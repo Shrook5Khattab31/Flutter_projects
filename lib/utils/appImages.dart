@@ -13,10 +13,13 @@ class AppImages{
   static const String radioBgImage = 'assets/images/homeAssets/RadioBackground.png';
   static const String SebhaBgImage = 'assets/images/homeAssets/SebhaBackground.png';
   static const String timeBgImage = 'assets/images/homeAssets/TimeBackground.png';
+
+  ///suraScreen///
+  static const String suraDecoration = 'assets/images/suraDecoration.png';
+
   ///sebhaTab///
   static const String sebhaCounter = 'assets/images/sebhaAssets/SebhaBody.png';
   static const String sebhaCounterTail = 'assets/images/sebhaAssets/Sebha.png';
-
   ///radioTab///
   static const String notPlayedDecoration =
       'assets/images/radioAssets/mosqueBg.png';
@@ -28,7 +31,6 @@ class AppImages{
       'assets/images/timeAssets/prayerTime.png';
   static const String eveningAzkar = 'assets/images/timeAssets/azkar.png';
   static const String morningAzkar = 'assets/images/timeAssets/azkar2.png';
-
   ///icons///
   static const String quranIcon = 'assets/icons/quran_icon.png';
   static const String hadethIcon = 'assets/icons/hadeth_icon.png';
