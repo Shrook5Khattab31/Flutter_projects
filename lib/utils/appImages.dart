@@ -25,6 +25,12 @@ class AppImages{
   static const String playedDecoration =
       'assets/images/radioAssets/playingAudio1.png';
 
+  ///timeTab///
+  static const String prayerTimeContainer =
+      'assets/images/timeAssets/prayerTime.png';
+  static const String eveningAzkar = 'assets/images/timeAssets/azkar.png';
+  static const String morningAzkar = 'assets/images/timeAssets/azkar2.png';
+
   ///icons///
   static const String quranIcon = 'assets/icons/quran_icon.png';
   static const String hadethIcon = 'assets/icons/hadeth_icon.png';

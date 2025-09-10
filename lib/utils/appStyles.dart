@@ -26,10 +26,36 @@ class AppStyles{
       fontSize: 20,
       fontFamily: "assets/fonts/Janna LT Bold.ttf"
   );
+  static const TextStyle bold24white = TextStyle(
+      color: AppColors.whiteColor,
+      fontWeight: FontWeight.bold,
+      fontSize: 24,
+      fontFamily: "assets/fonts/Janna LT Bold.ttf"
+  );
   static const TextStyle bold36white= TextStyle(
       color: AppColors.whiteColor,
       fontWeight: FontWeight.bold,
       fontSize: 36,
+      fontFamily: "assets/fonts/Janna LT Bold.ttf"
+  );
+
+  //////////////
+  static const TextStyle bold16blackTransparent = TextStyle(
+      color: AppColors.blackTransparentColor,
+      fontWeight: FontWeight.bold,
+      fontSize: 16,
+      fontFamily: "assets/fonts/Janna LT Bold.ttf"
+  );
+  static const TextStyle bold20blackTransparent = TextStyle(
+      color: AppColors.blackTransparentColor,
+      fontWeight: FontWeight.bold,
+      fontSize: 20,
+      fontFamily: "assets/fonts/Janna LT Bold.ttf"
+  );
+  static const TextStyle bold20blackTransparent2 = TextStyle(
+      color: AppColors.blackTransparentColor2,
+      fontWeight: FontWeight.bold,
+      fontSize: 20,
       fontFamily: "assets/fonts/Janna LT Bold.ttf"
   );
   //////////////
