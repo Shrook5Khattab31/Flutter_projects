@@ -18,10 +18,9 @@ class _SebhaTabState extends State<SebhaTab>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: Duration(minutes: 1),
+      duration: Duration(milliseconds: 300),
       vsync: this,
-    )
-      ..repeat();
+    );
   }
 
   @override
@@ -56,6 +55,7 @@ class _SebhaTabState extends State<SebhaTab>
               flex: 7,
               child: GestureDetector(
                 onTap: () {
+                  _controller.forward(from: 0);
                   if (counter == 33) {
                     if (index == SebhaInfo.tasbeh.length - 1) {
                       index = 0;
@@ -80,7 +80,8 @@ class _SebhaTabState extends State<SebhaTab>
                       ),
                     ),
                     RotationTransition(
-                      turns: _controller,
+                      turns: Tween(begin: 0.0, end: 0.0625).animate(
+                          _controller),
                       child: SizedBox(
                         height: height * 0.4,
                         child: ClipOval(
