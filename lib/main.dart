@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_project/screens/hadithScreen/hadithDetailsScreen.dart';
 import 'package:islami_project/screens/homeScreen/homeScreen.dart';
 import 'package:islami_project/screens/introScreen/introScreen.dart';
 import 'package:islami_project/screens/quranScreen/suraDetailsScreen/suraDetailsScreen.dart';
@@ -20,6 +21,7 @@ class IslamiApp extends StatelessWidget{
         RouteNames.introScreen:(context)=>IntroScreen(),
         RouteNames.homeScreen: (context)=>HomeScreen(),
         RouteNames.suraDetailsScreen: (context)=> SuraDetailsScreen(),
+        RouteNames.hadithDetailsScreen: (context)=> HadithDetailsScreen(),
       },
     );
   }

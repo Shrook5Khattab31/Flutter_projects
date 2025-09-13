@@ -67,8 +67,10 @@ flutter:
     - assets/icons/
     - assets/files/Suras/
     - assets/files/azkar/
+    - assets/files/Hadeeth/
     - assets/images/homeAssets/
     - assets/images/introAssets/
+    - assets/images/hadithAssets/
     - assets/images/sebhaAssets/
     - assets/images/radioAssets/
     - assets/images/timeAssets/
