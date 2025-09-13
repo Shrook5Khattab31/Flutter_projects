@@ -15,6 +15,9 @@ class AppImages{
   static const String timeBgImage = 'assets/images/homeAssets/TimeBackground.png';
   ///suraDetails///
   static const String suraDecoration = 'assets/images/suraDetailsDecoration.png';
+  ///hadithTab///
+  static const String hadithDecoration = 'assets/images/hadithAssets/hadithDecoration.png';
+  static const String hadithCardBackGround= 'assets/images/hadithAssets/HadithCardBackGround.png';
   ///sebhaTab///
   static const String sebhaCounter = 'assets/images/sebhaAssets/SebhaBody.png';
   static const String sebhaCounterTail = 'assets/images/sebhaAssets/Sebha.png';
