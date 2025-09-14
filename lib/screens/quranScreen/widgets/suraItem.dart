@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_project/utils/appImages.dart';
 import 'package:islami_project/utils/appStyles.dart';
 import 'package:islami_project/utils/routeNames.dart';
+
 import '../surasInfo.dart';
 
 class SuraItem extends StatelessWidget {

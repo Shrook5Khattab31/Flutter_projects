@@ -46,7 +46,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
               },
               child: Icon(
                 isPressed ? Icons.table_rows_rounded : Icons
-                    .format_line_spacing, size: 28,)
+                    .wrap_text_rounded, size: 28,)
           ),
         ],
       ),
