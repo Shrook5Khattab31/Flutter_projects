@@ -71,7 +71,7 @@ class TimeTab extends StatelessWidget {
                     Expanded(
                       flex: 3,
                       child: Padding(
-                        padding: EdgeInsets.only(top: height * 0.015),
+                        padding: EdgeInsets.only(top: height * 0.013),
                         child: CarouselSlider.builder(
                           itemCount: 5,
                           itemBuilder: (context, index, realIndex) =>
