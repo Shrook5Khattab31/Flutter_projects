@@ -1,12 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:islami_project/utils/appColors.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:islami_project/utils/appColors.dart';
 import 'package:islami_project/utils/appImages.dart';
 import 'package:islami_project/utils/appStyles.dart';
 import 'package:islami_project/utils/routeNames.dart';
 
-class IntroScreen extends StatelessWidget {
+class IntroScreen extends StatefulWidget {
 
+  @override
+  State<IntroScreen> createState() => _IntroScreenState();
+}
+
+class _IntroScreenState extends State<IntroScreen> {
+  bool _assetsPreloaded = false;
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_assetsPreloaded) {
+      _assetsPreloaded = true;
+      preloadAssets();
+    }
+  }
+
+  Future<void> preloadAssets() async {
+    await Future.wait([
+      precacheImage(AssetImage(AppImages.quranBgImage), context),
+      precacheImage(AssetImage(AppImages.hadithBgImage), context),
+      precacheImage(AssetImage(AppImages.SebhaBgImage), context),
+      precacheImage(AssetImage(AppImages.radioBgImage), context),
+      precacheImage(AssetImage(AppImages.timeBgImage), context),
+      precacheImage(AssetImage(AppImages.islamiLogo), context),
+    ]);
+  }
   @override
   Widget build(BuildContext context) {
     var height =MediaQuery.of(context).size.height;
@@ -70,6 +95,7 @@ class IntroScreen extends StatelessWidget {
       ),
     );
   }
+
   PageViewModel buildIntroPage({required String image,int flexOfImage=2, required String title,String description=''}){
     return PageViewModel(
       decoration: PageDecoration(
