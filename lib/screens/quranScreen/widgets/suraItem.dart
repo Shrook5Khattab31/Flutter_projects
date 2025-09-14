@@ -3,6 +3,7 @@ import 'package:islami_project/utils/appImages.dart';
 import 'package:islami_project/utils/appStyles.dart';
 import 'package:islami_project/utils/routeNames.dart';
 
+import '../sharedPrefs.dart';
 import '../surasInfo.dart';
 
 class SuraItem extends StatelessWidget {
@@ -46,6 +47,7 @@ class SuraItem extends StatelessWidget {
         ),
       ),
       onTap: (){
+        SharedPrefs.saveLastSuraIndex(index);
         Navigator.pushNamed(context, RouteNames.suraDetailsScreen, arguments: index);
       },
     );

@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:islami_project/screens/hadithScreen/hadithDetailsScreen.dart';
 import 'package:islami_project/screens/homeScreen/homeScreen.dart';
 import 'package:islami_project/screens/introScreen/introScreen.dart';
+import 'package:islami_project/screens/quranScreen/mostRecentProvider.dart';
 import 'package:islami_project/screens/quranScreen/suraDetailsScreen/suraDetailsScreen.dart';
 import 'package:islami_project/utils/appThemes.dart';
 import 'package:islami_project/utils/routeNames.dart';
+import 'package:provider/provider.dart';
 
 void main(){
-  runApp(IslamiApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => MostRecentProvider(),
+    child: IslamiApp()
+  )
+  );
 }
 class IslamiApp extends StatelessWidget{
   @override
