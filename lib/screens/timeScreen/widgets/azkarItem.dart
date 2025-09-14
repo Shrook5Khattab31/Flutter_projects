@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/appColors.dart';
+import '../../../utils/appImages.dart';
 import '../../../utils/appStyles.dart';
 
 class AzkarItem extends StatelessWidget {
-  String name;
-  String image;
-
-  AzkarItem({required this.name, required this.image});
+  int index;
+  AzkarItem({required this.index});
+  var azkarList = [
+    {'name': 'Evening Azkar', 'image': AppImages.eveningAzkar},
+    {'name': 'Morning Azkar', 'image': AppImages.morningAzkar},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +24,9 @@ class AzkarItem extends StatelessWidget {
         color: AppColors.blackBg,
         borderRadius: BorderRadius.circular(20),
         border: BoxBorder.all(color: AppColors.goldColor),
-        image: DecorationImage(image: AssetImage(image)),
+        image: DecorationImage(image: AssetImage(azkarList[index]['image']!)),
       ),
-      child: Text(name, style: AppStyles.bold20white),
+      child: Text(azkarList[index]['name']!, style: AppStyles.bold20white),
     );
   }
 }

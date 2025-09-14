@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_project/screens/hadithScreen/hadithTab.dart';
 import 'package:islami_project/screens/homeScreen/widgets/selectedItemWidget.dart';
 import 'package:islami_project/screens/quranScreen/quranTab.dart';
 import 'package:islami_project/screens/sebhaScreen/sebhaTab.dart';
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     var height =MediaQuery.of(context).size.height;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -63,13 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget buildPage({required int index}){
     switch(index){
       case 0: return QuranTab();
-      case 1:
-        return Placeholder();
+      case 1:return HadithTab();
       case 2: return SebhaTab();
-      case 3:
-        return RadioTab();
-      case 4:
-        return TimeTab();
+      case 3:return RadioTab();
+      case 4:return TimeTab();
       default: return QuranTab();
     }
   }

@@ -4,6 +4,9 @@ import 'package:islami_project/screens/quranScreen/surasInfo.dart';
 import 'package:islami_project/utils/appColors.dart';
 import 'package:islami_project/utils/appImages.dart';
 import 'package:islami_project/utils/appStyles.dart';
+import 'package:provider/provider.dart';
+
+import '../mostRecentProvider.dart';
 
 class SuraDetailsScreen extends StatefulWidget{
   @override
@@ -16,8 +19,11 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   List<String> suraLines= [];
   bool isLoaded=false;
   bool isPressed = false;
+  late MostRecentProvider mostRecentProvider;
+
   @override
   Widget build(BuildContext context) {
+    mostRecentProvider=Provider.of<MostRecentProvider>(context);
     var height= MediaQuery.of(context).size.height;
     var width= MediaQuery.of(context).size.width;
     index=ModalRoute.of(context)!.settings.arguments as int;
@@ -31,6 +37,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
         toolbarHeight: height*0.08,
         leading: InkWell(
           child: Icon(Icons.arrow_back,), onTap: () {
+          mostRecentProvider.readMostRecentList();
           Navigator.pop(context);
         },),
         title: Text(SurasInfo.englishQuranSurahs[index],style: AppStyles.bold20gold,),
@@ -46,7 +53,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
               },
               child: Icon(
                 isPressed ? Icons.table_rows_rounded : Icons
-                    .format_line_spacing, size: 28,)
+                    .wrap_text_rounded, size: 28,)
           ),
         ],
       ),

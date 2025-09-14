@@ -38,6 +38,7 @@ dependencies:
   shared_preferences: ^2.5.3
   flutter_native_splash: ^2.4.6
   carousel_slider: ^5.1.1
+  provider: ^6.1.5+1
 
 dev_dependencies:
   flutter_test:
@@ -67,8 +68,10 @@ flutter:
     - assets/icons/
     - assets/files/Suras/
     - assets/files/azkar/
+    - assets/files/Hadeeth/
     - assets/images/homeAssets/
     - assets/images/introAssets/
+    - assets/images/hadithAssets/
     - assets/images/sebhaAssets/
     - assets/images/radioAssets/
     - assets/images/timeAssets/
